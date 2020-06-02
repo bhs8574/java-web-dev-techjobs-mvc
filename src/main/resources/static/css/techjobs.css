@@ -2,6 +2,10 @@
     margin-top: 72px;
 }
 
+b {
+    font-size: 15px;
+}
+
 td, th {
     padding: 10px;
 }
@@ -30,7 +34,7 @@ table.job-listing {
 }
 
 table.job-listing td:first-child {
-    font-weight: bold;
+
 }
 
 table.job-listing td:last-child {

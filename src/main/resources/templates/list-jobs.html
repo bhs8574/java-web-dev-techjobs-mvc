@@ -14,12 +14,12 @@
     <table th:fragment="jobTable" class="job-listing">
         <tr th:each="job : ${jobs}">
             <td>
-                <p th:text="${'ID: ' + job.id}">ID</p>
-                <p th:text="${'Name: ' + job.name}">Name</p>
-                <p th:text="${'Employer: ' + job.employer}">Employer</p>
-                <p th:text="${'Location: ' + job.location}">Location</p>
-                <p th:text="${'Position Type: ' + job.positionType}">Position Type</p>
-                <p th:text="${'Skill: ' + job.coreCompetency}">Skill</p>
+                <p th:utext="${'&lt;b&gt;ID: &lt;/b&gt;' + job.id}">ID</p>
+                <p th:utext="${'&lt;b&gt;Name: &lt;/b&gt;' + job.name}">Name</p>
+                <p th:utext="${'&lt;b&gt;Employer: &lt;/b&gt;' + '&lt;a href=&quot;/list/jobs?column=employer&value='+job.employer+'&quot; &gt;' + job.employer + '&lt;/a&gt;'}">Employer</p>
+                <p th:utext="${'&lt;b&gt;Location: &lt;/b&gt;' + '&lt;a href=&quot;/list/jobs?column=location&value='+job.location+'&quot; &gt;' + job.location + '&lt;/a&gt;'}">Location</p>
+                <p th:utext="${'&lt;b&gt;Position Type: &lt;/b&gt;' + '&lt;a href=&quot;/list/jobs?column=positionType&value='+job.positionType+'&quot; &gt;' + job.positionType + '&lt;/a&gt;'}">Position Type</p>
+                <p th:utext="${'&lt;b&gt;Skill: &lt;/b&gt;' + '&lt;a href=&quot;/list/jobs?column=coreCompetency&value='+job.coreCompetency+'&quot; &gt;' + job.coreCompetency + '&lt;/a&gt;'}">Skill</p>
             </td>
         </tr>
     </table>
