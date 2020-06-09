@@ -9,5 +9,15 @@ public class TechJobsController {
 
     static HashMap<String, String> actionChoices = new HashMap<>();
 
+    public TechJobsController() {
+        actionChoices.put("search", "Search");
+        actionChoices.put("list", "List");
+    }
+
+    @ModelAttribute("actions")
+    public static HashMap<String, String> getActionChoices() {
+        return actionChoices;
+    }
+
 
 }
